@@ -5,13 +5,23 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-
+    <h1>Robots List</h1>
+      
+      
     <ul>
       <% robots.forEach(function(robot){ %>
-        <li><%= robot._id %> - <%= robot.name %> - <%= robot.description %></li>
+        
+        <li>
+            <a href="/robots/<%= robot._id %>"><%= robot._id %></a>
+             <%= robot.name %> - <%= robot.description %>
+            
+
+        
+        </li>
       <% }); %>
     </ul>
+      
+      
 
   </body>
 </html>
